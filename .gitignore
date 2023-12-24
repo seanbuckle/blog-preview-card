@@ -1,7 +1,9 @@
 # BEGIN: Sass
 *.css.map
-*.css
 *.scssc
 *.sassc
 .sass-cache/
 # END: Sass
+# BEGIN: TypeScript
+tsconfig.json
+# END: TypeScript

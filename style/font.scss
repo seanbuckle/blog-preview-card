@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@500;800&display=swap');
+
+:root{
+    --font-family: 'Figtree', sans-serif;
+    --heading: 800 1.5rem/2.5rem var(--font-family);
+    --body-md: 500 1rem/1.5rem var(--font-family);
+    --body-sm: 500 0.875rem/1.313rem var(--font-family);
+    --body-sm-bold: 800 0.875rem/1.313rem var(--font-family);
+}

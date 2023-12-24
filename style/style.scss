@@ -1,0 +1,103 @@
+@use './font.scss' as *;
+@use './color.scss' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    min-height: 100dvh;
+    background-color: var(--yellow-color);
+}
+
+::selection {
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+body {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    font: var(--body-md);
+    color: var(--black-color);
+}
+
+.main-content {
+    padding: 1.5rem;
+    display: grid;
+    place-items: center;
+}
+
+.card {
+    width: min(100%, 24rem);
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+    background-color: var(--white-color);
+    box-shadow: 0.5rem 0.5rem 0 0 var(--black-color);
+    cursor: pointer;
+    transform: translate(0, 0);
+    transition: all 0.3s ease-in-out;
+    &:hover, &:focus {
+        box-shadow: 1rem 1rem 0 0;
+        transform: translate(-8px, -8px);
+        & h1 {
+            color: var(--yellow-color);
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+        border-radius: 0.625rem;
+    }
+    &__content{
+        padding-top: 1.5rem;
+    }
+    &__overline {
+        width: fit-content;
+        padding: 0.25rem 0.75rem;
+        border-radius: 0.25rem;
+        display: flex;
+        font: var(--body-sm-bold);
+        background-color: var(--yellow-color);
+    }
+    & span:nth-child(2){
+        padding-top: 0.75rem;
+        display: inline-block;
+        font: var(--body-sm);
+    }
+    & h1 {
+        padding: 0.75rem 0;
+        font: var(--heading);
+        color: var(--black-color);
+        transition: all 0.3s ease-in-out;
+    }
+    & p{
+        color: var(--grey-color);
+    }
+    &__author{
+        padding-top: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font: var(--body-sm-bold);
+        & img {
+            width: 2rem;
+            height: auto;
+        }
+    }
+}
+
+.attribution {
+    padding: 1rem;
+    display: grid;
+    place-items: center;
+    a {
+        font: var(--body-sm-bold);
+        color: var(--black-color);
+        &:hover, &:focus {
+            text-decoration: none;
+        }
+    }
+}
